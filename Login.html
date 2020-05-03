@@ -1,14 +1,18 @@
-﻿<!DOCTYPE html>
+
+  
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>pepito perez</title>
+   
 </head>
 <body>
     <header>
+
         <section>
-        <h1>LOGIN</h1>
+            <h1>LOGIN</h1>
         </section>
     </header>
     <main>
@@ -16,26 +20,41 @@
             <img src="imagenes/hippo.png" width="150" height="150" alt="hipopotamo">
         </section>
         <section>
-            
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <form>
-                                Ingrese su nombre:
-                                <input type="text" name="nombre" size="20">
-                                <br><br>
-                                Ingrese su Contraseña:
-                                <input type="text" name="contraseña" size="20">
-                                <br><br>
-                                <button class="btn btn-outline-danger my-2 my-sm-0 ml-2" type="submit"> <a href="BookStudy.html">Enviar</a></button>
-                              </form>
-                        </div>
+
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <form>
+                            Ingrese su nombre:
+                            <input type="text" id="nombre" name="nombre" size="20">
+                            <br><br>
+                            Ingrese su Contraseña:
+                            <input type="text" id="contraseña"
+                                   name="contraseña" size="20">
+
+                            <br><br>
+                            <button type="button" onclick="validar()">
+                                Enviar
+                            </button>
+                            <p id="mensaje" />
+                        </form>
                     </div>
                 </div>
+            </div>
         </section>
     </main>
     <Footer>
         <h6>Desing ABO & LCV -2020 &copy;</h6>
     </Footer>
+
+    <script type="text/javascript">
+        function validar() {
+            var nombre = document.getElementById('nombre');
+            var contraseña = document.getElementById('contraseña');
+            if (nombre.defaultValue == "" || contraseña.defaultValue == "") {
+                document.getElementById('mensaje').innerHTML = 'debe ingresar  nombre de usuario y contraseña'
+            }
+        }
+    </script>
 </body>
 </html>
